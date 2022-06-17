@@ -1,4 +1,4 @@
-package ml.bibek.one.intro;
+package ml.bibek.one.strategy;
 
 public class ModelDuck extends Duck {
     public ModelDuck() {
