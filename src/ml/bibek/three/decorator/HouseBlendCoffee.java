@@ -8,6 +8,6 @@ public class HouseBlendCoffee extends Beverage {
 
     @Override
     public double cost() {
-        return .89;
+        return getTotalCost(.89);
     }
 }

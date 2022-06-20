@@ -17,5 +17,14 @@ public abstract class Beverage {
         return this.size;
     }
 
+    protected double getTotalCost(double initialCost) {
+        double totalCost = initialCost;
+        if (size == BeverageSize.GRANDE)
+            totalCost += initialCost + .05;
+        else if (size == BeverageSize.VENTI)
+            totalCost += initialCost + .1;
+        return totalCost;
+    }
+
     public abstract double cost();
 }
