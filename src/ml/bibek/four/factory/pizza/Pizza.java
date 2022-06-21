@@ -1,23 +1,21 @@
 package ml.bibek.four.factory.pizza;
 
+import ml.bibek.four.factory.ingredients.type.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Pizza {
 
     protected String name;
-    protected String dough;
-    protected String sauce;
-    protected List<String> toppings = new ArrayList<>();
+    protected Dough dough;
+    protected Sauce sauce;
+    protected Veggie[] veggies;
+    protected Cheese cheese;
+    protected Pepperoni pepperoni;
+    protected Calms calms;
 
-    public void prepare() {
-        System.out.println("Preparing " + name);
-        System.out.println("Tossing dough...");
-        System.out.println("Adding sauce...");
-        System.out.println("Adding toppings:-");
-        for (String topping : toppings)
-            System.out.println("\t" + topping);
-    }
+    public abstract void prepare();
 
     public void bake() {
         System.out.println("Baked for 25 minutes at 350");
@@ -33,5 +31,13 @@ public abstract class Pizza {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String toString() {
+        return "Pizza";
     }
 }
